@@ -602,3 +602,81 @@ np.random.rand(2, 5)
 - `numpy.nan_to_num(x)`：用 0 替换 NaN。
 - `numpy.interp(x, xp, fp, left, right, period)`：线性插值。
 
+## 8. 数组索引和切片
+
+### 8.1 数组索引
+
+我们可以通过索引值（从 0 开始）来访问` Ndarray `中的特定位置元素。NumPy 中的索引和 Python 对 list 索引的方式非常相似，但又有所不同。
+
+```python
+import numpy as np
+a = np.arange(10)  # 生成 0-9
+a[[1, 2, 3]]#分别获取索引值为 1，2，3 的数据
+
+a = np.arange(20).reshape(4, 5)
+#获取第 2 行，第 3 列的数据。
+a[1, 2]#注意list的索引形式为a[1][2]
+a = np.arange(30).reshape(2, 5, 3)
+a[[0, 1], [1, 2], [1, 2]]
+#注意上述三维下索引的分量是每个[]中取一个，上述相当于找（0，1，1）和（1,2,2）对应位置的元素，最后输出的是两个值
+```
+
+### 8.2 数组切片
+
+NumPy 里面针对` Ndarray `的数组切片和 Python 里的` list` 切片操作是一样的
+
+```python
+Ndarray[start:stop:step]
+```
+
+`[start:stop:step]` 分别代表 `[起始索引:截至索引:步长]`
+
+对于多维数组，我们只需要用逗号 `,` 分割不同维度即可：
+
+```python
+a = np.arange(20).reshape(4, 5)
+a
+#out:
+#array([[ 0,  1,  2,  3,  4],
+#       [ 5,  6,  7,  8,  9],
+#       [10, 11, 12, 13, 14],
+#       [15, 16, 17, 18, 19]])
+a[0:3, 2:4]
+#表示在第一个维度上切片[0:3]，第二个维度上切片[2:4]
+a[:, ::2]# 按步长为 2 取所有列和所有行的数据。
+```
+
+### 8.3 排序
+
+使用 `numpy.sort `方法对多维数组元素进行排序
+
+```python
+numpy.sort(a, axis=-1, kind='quicksort', order=None)
+```
+
+- `a`：数组。
+- `axis`：要排序的轴。如果为` None`，则在排序之前将数组铺平。默认值为 `-1`，沿最后一个轴排序。沿最后一个轴排序可以理解为，在输出结果上，只对最内层的[ ]中的元素进行排序
+- `kind`：`{'quicksort'，'mergesort'，'heapsort'}`，排序算法。默认值为 `quicksort`。
+
+其他排序方式
+
+- `numpy.lexsort(keys ,axis)`：使用多个键进行间接排序。
+- `numpy.argsort(a ,axis,kind,order)`：沿给定轴执行间接排序。
+- `numpy.msort(a)`：沿第 1 个轴排序。
+- `numpy.sort_complex(a)`：针对复数排序。
+
+### 8.4 搜索计数
+
+- `argmax(a ,axis,out)`：返回数组中指定轴的最大值的索引。
+- `nanargmax(a ,axis)`：返回数组中指定轴的最大值的索引,忽略 NaN。
+- `argmin(a ,axis,out)`：返回数组中指定轴的最小值的索引。
+- `nanargmin(a ,axis)`：返回数组中指定轴的最小值的索引,忽略 NaN。
+- `argwhere(a)`：返回数组中非 0 元素的索引,按元素分组。
+- `nonzero(a)`：返回数组中非 0 元素的索引。
+- `flatnonzero(a)`：返回数组中非 0 元素的索引,并铺平。
+- `where(条件,x,y)`：根据指定条件,从指定行、列返回元素。
+- `searchsorted(a,v ,side,sorter)`：查找要插入元素以维持顺序的索引。
+- `extract(condition,arr)`：返回满足某些条件的数组的元素。
+
+- `count_nonzero(a)`：计算数组中非 0 元素的数量。
+
