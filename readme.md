@@ -12,7 +12,7 @@ CS1805 裴涵
 - [x] [使用naive bayes算法进行垃圾邮件预测实验](https://github.com/BaiMoHan/MachineLearning-ING-2020513/tree/master/course/NavieBayes)
 - [x] [课程项目-语音性别识别](https://github.com/BaiMoHan/MachineLearning-ING-2020513/tree/master/course/Project)
 
-点击任务可直达仓库对应目录下
+**点击任务可直达仓库对应目录下**
 
 [pre目录](https://github.com/BaiMoHan/MachineLearning-ING-2020513/tree/master/pre)下包含
 
