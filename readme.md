@@ -16,10 +16,10 @@ CS1805 裴涵
 
 [pre目录](https://github.com/BaiMoHan/MachineLearning-ING-2020513/tree/master/pre)下包含
 
-- [x] numpy入门代码及笔记
-- [x] Matplotlib入门及笔记
-- [x] seaborn基础入门及笔记
-- [x] 开发工具笔记
+- [x] [numpy入门代码及笔记](https://github.com/BaiMoHan/MachineLearning-ING-2020513/blob/master/pre/%E7%AC%94%E8%AE%B0/numpy%E5%85%A5%E9%97%A8.md)
+- [x] [Matplotlib入门及笔记](https://github.com/BaiMoHan/MachineLearning-ING-2020513/blob/master/pre/%E7%AC%94%E8%AE%B0/Matplotlib%E5%85%A5%E9%97%A8.md)
+- [x] [seaborn基础入门及笔记](https://github.com/BaiMoHan/MachineLearning-ING-2020513/blob/master/pre/%E7%AC%94%E8%AE%B0/Seaborn%E5%9F%BA%E7%A1%80.md)
+- [x] [开发工具笔记](https://github.com/BaiMoHan/MachineLearning-ING-2020513/blob/master/pre/%E7%AC%94%E8%AE%B0/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7.md)
 
 本仓库遵循LGPL许可证
 
